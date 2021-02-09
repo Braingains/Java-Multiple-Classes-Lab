@@ -33,4 +33,8 @@ public class Bus {
     public int getPassengerCount(){
         return this.passengers.size();
     }
+
+    public void removePassenger() {
+        this.passengers.remove(0);
+    }
 }
