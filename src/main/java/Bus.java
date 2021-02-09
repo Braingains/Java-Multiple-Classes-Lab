@@ -23,12 +23,22 @@ public class Bus {
         return this.capacity;
     }
 
-    public boolean addPassenger(Person person) {
+//    public boolean addPassenger(Person person) {
+//        if (this.getPassengerCount() < this.capacity) {
+//            this.passengers.add(person);
+//            return true;
+//        } return false;
+//    }
+
+    public boolean addPassenger(BusStop busStop) {
         if (this.getPassengerCount() < this.capacity) {
-            this.passengers.add(person);
-            return true;
+            Person person = busStop.removePersonFromQueue();
+             this.passengers.add(person);
+                return true;
         } return false;
     }
+
+
 
     public int getPassengerCount(){
         return this.passengers.size();
